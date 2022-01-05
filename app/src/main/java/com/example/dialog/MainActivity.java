@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
         //dialog.setTitle("alert");
         AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
         builder.setMessage("this is the dialog");
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
         builder.create().show();
+        //dialog.show();
     }
 }
